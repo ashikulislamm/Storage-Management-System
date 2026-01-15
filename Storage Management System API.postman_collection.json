@@ -1,0 +1,1227 @@
+{
+	"info": {
+		"_postman_id": "9daa3138-973a-4fc1-8619-18e079e87637",
+		"name": "Storage Management System API",
+		"description": "Postman collection for testing Storage Management System backend APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40350202"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Ashikul Islam\",\r\n  \"email\": \"ashikulislam780@gmail.com\",\r\n  \"password\": \"ashik780\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "Upload Image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1f0f1e75-a826-4600-bfcf-324eb2b33fcb"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/files/upload/image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"files",
+								"upload",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload PDF",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1f0f1eb5-2845-4c20-9741-20d62af020ab"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/files/upload/pdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"files",
+								"upload",
+								"pdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Note",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Meeting Notes\",\r\n  \"content\": \"Important points from the meeting...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/files/note",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"files",
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Files",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/files",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single File",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/files/6968a43c6c4bbf5558b23abe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"files",
+								"6968a43c6c4bbf5558b23abe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rename",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ashik_CV.pdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/files/6968a43c6c4bbf5558b23abe/rename",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"files",
+								"6968a43c6c4bbf5558b23abe",
+								"rename"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Duplicate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/files/6968a43c6c4bbf5558b23abe/duplicate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"files",
+								"6968a43c6c4bbf5558b23abe",
+								"duplicate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete File",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/files/6968b6886c4bbf5558b23ad3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"files",
+								"6968b6886c4bbf5558b23ad3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Profile API",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"John Smith\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Folders",
+			"item": [
+				{
+					"name": "Create Folder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Documents 2\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/folders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"folders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Folders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/folders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"folders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Folder",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/folders/6968b7546c4bbf5558b23ae0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"folders",
+								"6968b7546c4bbf5558b23ae0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Folder Contents",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/folders/6968b7546c4bbf5558b23ae0/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"folders",
+								"6968b7546c4bbf5558b23ae0",
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rename Folder",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Personal Documents\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/folders/6968b7726c4bbf5558b23ae5/rename",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"folders",
+								"6968b7726c4bbf5558b23ae5",
+								"rename"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Duplicate Folder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Personal Documents\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/folders/6968b7726c4bbf5558b23ae5/duplicate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"folders",
+								"6968b7726c4bbf5558b23ae5",
+								"duplicate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Folder",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/folders/6968b7726c4bbf5558b23ae5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"folders",
+								"6968b7726c4bbf5558b23ae5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Share",
+			"item": [
+				{
+					"name": "Share File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sharedWithEmail\": \"ashikulislam780@gmail.com\",\r\n  \"permission\": \"view\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/shares/file/6968a43c6c4bbf5558b23abe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shares",
+								"file",
+								"6968a43c6c4bbf5558b23abe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Share Folder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sharedWithEmail\": \"ashikulislam780@gmail.com\",\r\n  \"permission\": \"view\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/shares/folder/6968b8b56c4bbf5558b23af9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shares",
+								"folder",
+								"6968b8b56c4bbf5558b23af9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shared With Me",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sharedWithEmail\": \"ashikulislam780@gmail.com\",\r\n  \"permission\": \"view\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/shares/shared-with-me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shares",
+								"shared-with-me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Shares",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sharedWithEmail\": \"ashikulislam780@gmail.com\",\r\n  \"permission\": \"view\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/shares/my-shares",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shares",
+								"my-shares"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revoke Share",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sharedWithEmail\": \"ashikulislam780@gmail.com\",\r\n  \"permission\": \"view\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/shares/6968b9d06c4bbf5558b23b12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shares",
+								"6968b9d06c4bbf5558b23b12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favourites",
+			"item": [
+				{
+					"name": "Add Fav File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/favorites/file/6968a43c6c4bbf5558b23abe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"favorites",
+								"file",
+								"6968a43c6c4bbf5558b23abe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Fav Folder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/favorites/folder/6968b7546c4bbf5558b23ae0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"favorites",
+								"folder",
+								"6968b7546c4bbf5558b23ae0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Fav",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/favorites/file/6968a43c6c4bbf5558b23abe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"favorites",
+								"file",
+								"6968a43c6c4bbf5558b23abe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Fav",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/favorites",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activity",
+			"item": [
+				{
+					"name": "Get All Activity",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/activities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"activities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activity By Date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/activities/date/2026-01-15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"activities",
+								"date",
+								"2026-01-15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Date Range",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/activities/range?startDate=2026-01-01&endDate=2026-01-31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"activities",
+								"range"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2026-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2026-01-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calendar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Njg5OTNiMmU1YWRmZDMyOTNkOWE1MyIsImlhdCI6MTc2ODQ2MzEyNiwiZXhwIjoxNzY5MDY3OTI2fQ.qo9k3n0s8B4JQA8IqK3_VQzQnhZmclWjI2zzHfmZxAQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/activities/calendar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"activities",
+								"calendar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
