@@ -307,7 +307,7 @@ NODE_ENV=development
 PORT=3000
 
 # Database Configuration
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/storage_system?retryWrites=true&w=majority&ssl=true
+MONGODB_URI=Your DB URL Here
 
 # JWT Configuration
 JWT_SECRET=your_super_secure_jwt_secret_key_change_this
@@ -334,10 +334,6 @@ LOG_LEVEL=info
 | `UPLOAD_PATH` | File upload directory | `./uploads` | No |
 
 ### MongoDB URI Format
-
-```
-mongodb+srv://<username>:<password>@<cluster>.<id>.mongodb.net/<database>?retryWrites=true&w=majority&ssl=true
-```
 
 **Important Security Notes:**
 - Never commit `.env` file to version control
