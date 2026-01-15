@@ -1,4 +1,4 @@
-# 📦 Storage Management System
+# 📦 Jotter - A Storage Management System
 
 A comprehensive **Google Drive-like Storage Management System** backend API built with Node.js, Express, and MongoDB. This system provides secure file storage, folder organization, file sharing, favorites management, and activity tracking capabilities.
 
