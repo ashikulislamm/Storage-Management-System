@@ -214,12 +214,6 @@ modules/
 - **express-error-toolkit:** Centralized error handling
 - **http-status-toolkit:** HTTP status code management
 
-### Logging
-- **winston:** Application-level logging
-  - File logging (combined.log, error.log)
-  - Console logging with color coding
-  - Daily rotation support
-
 ### Development Tools
 - **nodemon:** Auto-restart on file changes
 - **ES6 Modules:** Modern import/export syntax
